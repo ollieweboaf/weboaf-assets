@@ -1,0 +1,373 @@
+
+/* EPIA NEURO — ASHBY EMBED THEME
+   Standalone stylesheet for Ashby's iframe.
+*/
+
+/* 01 — FONTS */
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://cdn.prod.website-files.com/69ca70d0e0d63ec748580fdc/69cd2fb76eafeb5289e22f72_aeonik-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://cdn.prod.website-files.com/69ca70d0e0d63ec748580fdc/69cd2fc15e4933067e172b07_aeonik-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://cdn.prod.website-files.com/69ca70d0e0d63ec748580fdc/69cd2fd745175943f0cf72c6_aeonik-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://cdn.prod.website-files.com/69ca70d0e0d63ec748580fdc/69cd2fea2e0693dd533c2642_aeonik-regularitalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://cdn.prod.website-files.com/69ca70d0e0d63ec748580fdc/69cd2ffbd7a21d91ec82d20c_aeonik-mediumitalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://cdn.prod.website-files.com/69ca70d0e0d63ec748580fdc/69cd30090987b3728eebf92d_aeonik-bolditalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* 02 — DESIGN TOKENS */
+
+:root {
+  --colorAppBackground: #111111;
+  --colorPrimary900: #ffffff;
+  --colorPrimary600: #ffffff;
+
+  --widthMaxContent: 90rem;
+  --widthMaxJobBoard: 90rem;
+  --widthMaxSubscriptionPreferences: 50rem;
+
+  --borderRadiusContainer: 1rem;
+  --borderRadiusControl: .5rem;
+  --borderRadiusButton: .5rem;
+
+  --fontFamily: "Aeonik", Arial, sans-serif;
+
+  --epia-bg: #111111;
+  --epia-text: #ffffff;
+  --epia-muted: #b8b8b8;
+  --epia-border: #444444;
+  --epia-surface: #1c1c1c;
+  --epia-radius: .5rem;
+  --epia-space: clamp(1rem, 2vw, 2rem);
+}
+
+/* 03 — GLOBAL */
+
+html,
+body,
+#root {
+  background-color: var(--epia-bg) !important;
+  color: var(--epia-text) !important;
+  font-family: var(--fontFamily) !important;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--fontFamily) !important;
+  font-weight: 400;
+}
+
+body {
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--epia-text) !important;
+  line-height: 1.1;
+  letter-spacing: -.03em;
+}
+
+a {
+  color: var(--epia-text) !important;
+}
+
+a:hover {
+  opacity: .8;
+}
+
+/* 04 — JOB BOARD */
+
+.ashby-job-board-heading,
+.ashby-department-heading,
+.ashby-department-heading-level,
+.ashby-job-posting-brief-department-heading,
+.ashby-job-posting-brief-department-heading-level {
+  color: var(--epia-text) !important;
+  font-weight: 500 !important;
+}
+
+.ashby-job-board-heading-count,
+.ashby-job-posting-brief-details {
+  color: var(--epia-muted) !important;
+}
+
+.ashby-job-board-filters-label,
+.ashby-job-board-reset-filters-label {
+  color: var(--epia-text) !important;
+}
+
+.ashby-job-board-filter {
+  background: var(--epia-surface) !important;
+  color: var(--epia-text) !important;
+  border: 1px solid var(--epia-border) !important;
+  border-radius: var(--epia-radius) !important;
+}
+
+.ashby-job-board-filter option {
+  background: var(--epia-surface);
+  color: var(--epia-text);
+}
+
+/* 05 — JOB LISTINGS */
+
+.ashby-job-posting-brief-list {
+  background: transparent !important;
+}
+
+.ashby-job-posting-brief {
+  background: transparent !important;
+  color: var(--epia-text) !important;
+  border-color: var(--epia-border) !important;
+  margin-bottom: .75rem;
+}
+
+.ashby-job-posting-brief:hover {
+  background: var(--epia-surface) !important;
+}
+
+.ashby-job-posting-brief-title {
+  color: var(--epia-text) !important;
+  font-weight: 500 !important;
+}
+
+/* 06 — JOB DETAILS */
+
+.ashby-job-posting-header,
+.ashby-job-posting-left-pane,
+.ashby-job-posting-right-pane,
+.ashby-job-posting-description-container,
+.ashby-job-posting-description {
+  background: transparent !important;
+  color: var(--epia-text) !important;
+}
+
+.ashby-job-posting-heading {
+  color: var(--epia-text) !important;
+  font-weight: 500 !important;
+}
+
+.ashby-job-posting-description h1,
+.ashby-job-posting-description h2,
+.ashby-job-posting-description h3,
+.ashby-job-posting-description h4,
+.ashby-job-posting-description h5,
+.ashby-job-posting-description h6,
+.ashby-job-posting-description p,
+.ashby-job-posting-description li,
+.ashby-job-posting-description strong {
+  color: var(--epia-text) !important;
+}
+
+.ashby-job-board-back-to-all-jobs-button,
+.ashby-job-posting-right-pane-application-tab,
+.ashby-job-posting-right-pane-overview-tab {
+  color: var(--epia-text) !important;
+}
+
+.ashby-job-posting-right-pane-tab-slider {
+  background: var(--epia-text) !important;
+}
+
+/* 07 — APPLICATION FORM */
+
+.ashby-application-form-container,
+.ashby-application-form-section-container,
+.ashby-application-form-section-header,
+.ashby-application-form-field-entry {
+  background: transparent !important;
+  color: var(--epia-text) !important;
+}
+
+.ashby-application-form-section-header-title,
+.ashby-application-form-question-title {
+  color: var(--epia-text) !important;
+  font-weight: 500 !important;
+}
+
+.ashby-application-form-section-header-description,
+.ashby-application-form-question-description,
+.ashby-application-form-texting-consent-description,
+.ashby-application-blocking-disclosure {
+  color: var(--epia-muted) !important;
+}
+
+/* 08 — FORM INPUTS */
+
+.ashby-application-form-input-text,
+.ashby-application-form-input-textarea,
+.ashby-application-form-input-dropdown,
+.ashby-application-form-input-dropdown-select,
+.ashby-application-form-input-date,
+.ashby-application-form-input-autocomplete {
+  background: var(--epia-surface) !important;
+  color: var(--epia-text) !important;
+  border: 1px solid var(--epia-border) !important;
+  border-radius: var(--epia-radius) !important;
+}
+
+.ashby-application-form-input-text::placeholder,
+.ashby-application-form-input-textarea::placeholder {
+  color: var(--epia-muted) !important;
+}
+
+.ashby-application-form-input-text:focus,
+.ashby-application-form-input-textarea:focus,
+.ashby-application-form-input-dropdown:focus-within,
+.ashby-application-form-input-autocomplete:focus-within {
+  border-color: var(--epia-text) !important;
+}
+
+/* 09 — CHECKBOXES & RADIO BUTTONS */
+
+.ashby-application-form-input-checkbox-group,
+.ashby-application-form-input-radio-group,
+.ashby-application-form-input-checkbox-group-option-label,
+.ashby-application-form-input-radio-group-option-label {
+  color: var(--epia-text) !important;
+}
+
+.ashby-application-form-input-checkbox-group-option-checkbox,
+.ashby-application-form-input-radio-group-option-radio {
+  accent-color: var(--epia-text);
+}
+
+.ashby-application-form-input-yesno-option {
+  background: var(--epia-surface) !important;
+  border-color: var(--epia-border) !important;
+  color: var(--epia-text) !important;
+}
+
+/* 10 — UPLOADS, AUTOFILL & POPUPS */
+
+.ashby-application-form-input-file,
+.ashby-application-form-input-file-dropzone,
+.ashby-application-form-autofill-input-root,
+.ashby-application-form-autofill-input-base-layer,
+.ashby-application-form-autofill-pane,
+.ashby-application-form-input-autocomplete-popup,
+.ashby-application-form-input-date-popup,
+.ashby-application-form-input-date-popup-header {
+  background: var(--epia-surface) !important;
+  color: var(--epia-text) !important;
+  border-color: var(--epia-border) !important;
+}
+
+.ashby-application-form-input-file-dropzone-instructions,
+.ashby-application-form-input-file-dropzone-upload,
+.ashby-application-form-input-file-item-name,
+.ashby-application-form-autofill-input-title,
+.ashby-application-form-input-autocomplete-popup-result,
+.ashby-application-form-input-autocomplete-popup-empty,
+.ashby-application-form-input-autocomplete-popup-loading,
+.ashby-application-form-input-date-popup-title,
+.ashby-application-form-input-date-popup-header-button {
+  color: var(--epia-text) !important;
+}
+
+.ashby-application-form-autofill-input-description {
+  color: var(--epia-muted) !important;
+}
+
+.ashby-application-form-input-autocomplete-popup-result[aria-selected="true"] {
+  background: #333333 !important;
+}
+
+/* 11 — BUTTONS */
+
+.ashby-application-form-submit-button {
+  background: var(--epia-text) !important;
+  color: var(--epia-bg) !important;
+  border: 1px solid var(--epia-text) !important;
+  border-radius: var(--epia-radius) !important;
+  font-weight: 500 !important;
+  transition: background .2s ease, color .2s ease;
+}
+
+.ashby-application-form-submit-button:hover:not(:disabled) {
+  background: #dddddd !important;
+  color: #111111 !important;
+}
+
+.ashby-application-form-submit-button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+/* 12 — FEEDBACK & ACCESSIBILITY */
+
+.ashby-application-form-success-container,
+.ashby-application-form-failure-container,
+.ashby-application-form-blocked-application-container {
+  background: var(--epia-surface) !important;
+  color: var(--epia-text) !important;
+}
+
+.ashby-application-form-input-education-entry,
+.ashby-survey-form-container {
+  background: transparent !important;
+  color: var(--epia-text) !important;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--epia-text) !important;
+  outline-offset: 2px;
+}
+
+/* 13 — RESPONSIVE */
+
+@media (max-width: 767px) {
+  :root {
+    --widthMaxContent: 100%;
+    --widthMaxJobBoard: 100%;
+  }
+}
