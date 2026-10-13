@@ -4,6 +4,73 @@
    DARK THEME
    ============================================ */
 
+
+/* EPIA NEURO — AEONIK FONTS */
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://cdn.prod.website-files.com/69ca70d0e0d63ec748580fdc/69cd2fb76eafeb5289e22f72_aeonik-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://cdn.prod.website-files.com/69ca70d0e0d63ec748580fdc/69cd2fc15e4933067e172b07_aeonik-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://cdn.prod.website-files.com/69ca70d0e0d63ec748580fdc/69cd2fd745175943f0cf72c6_aeonik-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://cdn.prod.website-files.com/69ca70d0e0d63ec748580fdc/69cd2fea2e0693dd533c2642_aeonik-regularitalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://cdn.prod.website-files.com/69ca70d0e0d63ec748580fdc/69cd2ffbd7a21d91ec82d20c_aeonik-mediumitalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("https://cdn.prod.website-files.com/69ca70d0e0d63ec748580fdc/69cd30090987b3728eebf92d_aeonik-bolditalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* APPLY FONT TO ASHBY */
+
+:root {
+  --fontFamily: "Aeonik", Arial, sans-serif;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Aeonik", Arial, sans-serif !important;
+}
+
+
 /* 01. GLOBAL VARIABLES */
 
 :root {
