@@ -1,96 +1,395 @@
-```
-/* stylelint-disable */
 
-/* These variables can be used to control values throughout the job board. */
+/* ============================================
+   EPIA NEURO — ASHBY JOB BOARD
+   DARK THEME
+   ============================================ */
+
+/* 01. GLOBAL VARIABLES */
+
 :root {
-  /* Background color of the application */
-  --colorAppBackground: #f7f8fa;
+  --colorAppBackground: #000000;
+  --colorPrimary900: #ffffff;
+  --colorPrimary600: #ffffff;
 
-  /*
-   * Darker primary color
-   * WARNING - This can be set in the Ashby admin under theme settings!
-   * If you modify, you should make sure your colors work with the settings there.
-   */
-  --colorPrimary900: darkorange;
-
-  /*
-   * Lighter primary color
-   * WARNING - This can be set in the Ashby admin under theme settings!
-   * If you modify, you should make sure your colors work with the settings there.
-   */
-  --colorPrimary600: orange;
-
-  /* The max width of job board container */
-  --widthMaxContent: 800px;
-
-  /* The max width of application form section */
-  --widthMaxJobBoard: 800px;
-
-  /* The max width of subscription preferences container */
+  --widthMaxContent: 1200px;
+  --widthMaxJobBoard: 1200px;
   --widthMaxSubscriptionPreferences: 600px;
 
-  /* Container border radius */
-  --borderRadiusContainer: 10px;
+  --borderRadiusContainer: 0px;
+  --borderRadiusControl: 0px;
+  --borderRadiusButton: 0px;
 
-  /* Border radius of control elements (e.g. input boxes) */
-  --borderRadiusControl: 10px;
+  --fontFamily: Arial, Helvetica, sans-serif;
 
-  /* Button border radius */
-  --borderRadiusButton: 10px;
-
-  /* Font families */
-  --fontFamily: "Whitney SSm", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica", "Arial", "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+  --epia-background: #000000;
+  --epia-surface: #151515;
+  --epia-text: #ffffff;
+  --epia-muted: #b8b8b8;
+  --epia-border: #444444;
 }
 
-/* A container for the application limits disclosure message shown before form submission. */
-.ashby-application-blocking-disclosure {}
+/* 02. GLOBAL STYLING */
 
-/* Application autofill input's base layer element. This contains standard copy, a CTA button, and potential validation alerts. */
-.ashby-application-form-autofill-input-base-layer {}
+html,
+body,
+#root {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  font-family: var(--fontFamily) !important;
+}
 
-/* Application autofill input's description. */
-.ashby-application-form-autofill-input-description {}
+body {
+  margin: 0;
+}
 
-/* Application autofill input's drag state overlay element. Can style [data-state] which can be 'active' or 'hidden'. */
-.ashby-application-form-autofill-input-drag-layer {}
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--fontFamily) !important;
+}
 
-/* Application autofill input form's alert element. Can style [data-highlight] which can be 'negative' or 'positive'. */
-.ashby-application-form-autofill-input-form-alert {}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ffffff !important;
+}
 
-/* Application autofill input's magic sparkles icon. */
-.ashby-application-form-autofill-input-icon {}
+p,
+li,
+label {
+  color: inherit;
+}
 
-/* Application autofill input's pending state overlay element. Can style [data-state] which can be 'active' or 'hidden'. */
-.ashby-application-form-autofill-input-pending-layer {}
+a {
+  color: #ffffff;
+}
 
-/* Application autofill input's root element. Can style [data-state] which can be 'pending', 'drag', or 'default'. */
-.ashby-application-form-autofill-input-root {}
+a:hover {
+  opacity: 0.7;
+}
 
-/* Application autofill input's title. */
-.ashby-application-form-autofill-input-title {}
+/* 03. JOB BOARD */
 
-/* Container element for application autofill input form. */
-.ashby-application-form-autofill-pane {}
+.ashby-job-board-heading {
+  color: #ffffff !important;
+}
 
-/* The resume uploader to auto-fill the application form */
-.ashby-application-form-autofill-uploader {}
+.ashby-job-board-heading-count {
+  color: #b8b8b8 !important;
+}
 
-/* A container for displaying the custom message to the user */
-.ashby-application-form-blocked-application-container {}
+.ashby-department-heading,
+.ashby-department-heading-level {
+  color: #ffffff !important;
+}
 
-/* A container for the application form. */
-.ashby-application-form-container {}
+.ashby-job-board-filters-label,
+.ashby-job-board-reset-filters-label {
+  color: #ffffff !important;
+}
 
-/* A container for the failure message */
-.ashby-application-form-failure-container {}
+.ashby-job-board-filter {
+  background-color: #151515 !important;
+  color: #ffffff !important;
+  border: 1px solid #444444 !important;
+  border-radius: 0 !important;
+}
 
-/* A container for the label and input on an application form. */
-.ashby-application-form-field-entry {}
+.ashby-job-board-filter option {
+  background-color: #151515;
+  color: #ffffff;
+}
 
-/* An autocomplete input on an application form. */
+/* 04. JOB LISTINGS */
+
+.ashby-job-posting-brief-list {
+  background-color: transparent !important;
+}
+
+.ashby-job-posting-brief {
+  background-color: transparent !important;
+  color: #ffffff !important;
+  border-color: #444444 !important;
+  margin-bottom: 10px;
+}
+
+.ashby-job-posting-brief:hover {
+  background-color: #151515 !important;
+}
+
+.ashby-job-posting-brief-title {
+  color: #ffffff !important;
+}
+
+.ashby-job-posting-brief-details {
+  color: #b8b8b8 !important;
+}
+
+.ashby-job-posting-brief-department-heading,
+.ashby-job-posting-brief-department-heading-level {
+  color: #ffffff !important;
+}
+
+/* 05. INDIVIDUAL JOB PAGE */
+
+.ashby-job-posting-header,
+.ashby-job-posting-left-pane,
+.ashby-job-posting-right-pane {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.ashby-job-posting-heading {
+  color: #ffffff !important;
+}
+
+.ashby-job-posting-description-container,
+.ashby-job-posting-description {
+  background-color: transparent !important;
+  color: #ffffff !important;
+}
+
+.ashby-job-posting-description h1,
+.ashby-job-posting-description h2,
+.ashby-job-posting-description h3,
+.ashby-job-posting-description h4,
+.ashby-job-posting-description h5,
+.ashby-job-posting-description h6 {
+  color: #ffffff !important;
+}
+
+.ashby-job-posting-description p,
+.ashby-job-posting-description li,
+.ashby-job-posting-description strong {
+  color: #ffffff !important;
+}
+
+.ashby-job-posting-description a {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+
+.ashby-job-board-back-to-all-jobs-button {
+  color: #ffffff !important;
+}
+
+/* 06. JOB PAGE TABS */
+
+.ashby-job-posting-right-pane-application-tab,
+.ashby-job-posting-right-pane-overview-tab {
+  color: #ffffff !important;
+}
+
+.ashby-job-posting-right-pane-tab-slider {
+  background-color: #ffffff !important;
+}
+
+/* 07. APPLICATION FORM */
+
+.ashby-application-form-container,
+.ashby-application-form-section-container,
+.ashby-application-form-section-header {
+  background-color: transparent !important;
+  color: #ffffff !important;
+}
+
+.ashby-application-form-section-header-title,
+.ashby-application-form-question-title {
+  color: #ffffff !important;
+}
+
+.ashby-application-form-section-header-description,
+.ashby-application-form-question-description {
+  color: #b8b8b8 !important;
+}
+
+.ashby-application-form-field-entry {
+  color: #ffffff !important;
+}
+
+/* 08. TEXT INPUTS */
+
+.ashby-application-form-input-text,
+.ashby-application-form-input-textarea,
+.ashby-application-form-input-dropdown,
+.ashby-application-form-input-dropdown-select,
+.ashby-application-form-input-date,
 .ashby-application-form-input-autocomplete {
-  /* Use [aria-expanded="true"] to target when the popup is open. */
+  background-color: #151515 !important;
+  color: #ffffff !important;
+  border: 1px solid #444444 !important;
+  border-radius: 0 !important;
 }
 
-/* The results popup for an autocomplete input. */
+.ashby-application-form-input-text::placeholder,
+.ashby-application-form-input-textarea::placeholder {
+  color: #999999 !important;
+}
+
+.ashby-application-form-input-text:focus,
+.ashby-application-form-input-textarea:focus,
+.ashby-application-form-input-dropdown:focus-within,
+.ashby-application-form-input-autocomplete:focus-within {
+  border-color: #ffffff !important;
+  outline-color: #ffffff !important;
+}
+
+/* 09. CHECKBOXES & RADIO BUTTONS */
+
+.ashby-application-form-input-checkbox-group,
+.ashby-application-form-input-radio-group {
+  color: #ffffff !important;
+}
+
+.ashby-application-form-input-checkbox-group-option-label,
+.ashby-application-form-input-radio-group-option-label {
+  color: #ffffff !important;
+}
+
+.ashby-application-form-input-checkbox-group-option-checkbox,
+.ashby-application-form-input-radio-group-option-radio {
+  accent-color: #ffffff;
+}
+
+.ashby-application-form-input-yesno-option {
+  background-color: #151515 !important;
+  color: #ffffff !important;
+  border-color: #444444 !important;
+}
+
+/* 10. FILE UPLOAD */
+
+.ashby-application-form-input-file,
+.ashby-application-form-input-file-dropzone {
+  background-color: #151515 !important;
+  color: #ffffff !important;
+  border-color: #444444 !important;
+}
+
+.ashby-application-form-input-file-dropzone-instructions,
+.ashby-application-form-input-file-item-name {
+  color: #ffffff !important;
+}
+
+.ashby-application-form-input-file-dropzone-upload {
+  color: #ffffff !important;
+}
+
+/* 11. APPLICATION SUBMIT BUTTON */
+
+.ashby-application-form-submit-button {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #ffffff !important;
+  border-radius: 0 !important;
+  font-weight: 600 !important;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.ashby-application-form-submit-button:hover:not(:disabled) {
+  background-color: #dddddd !important;
+  color: #000000 !important;
+}
+
+.ashby-application-form-submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 12. APPLICATION AUTOFILL */
+
+.ashby-application-form-autofill-input-root,
+.ashby-application-form-autofill-input-base-layer,
+.ashby-application-form-autofill-pane {
+  background-color: #151515 !important;
+  color: #ffffff !important;
+  border-color: #444444 !important;
+}
+
+.ashby-application-form-autofill-input-title {
+  color: #ffffff !important;
+}
+
+.ashby-application-form-autofill-input-description {
+  color: #b8b8b8 !important;
+}
+
+/* 13. AUTOCOMPLETE */
+
 .ashby-application-form-input-autocomplete-popup {
+  background-color: #151515 !important;
+  color: #ffffff !important;
+  border-color: #444444 !important;
+}
+
+.ashby-application-form-input-autocomplete-popup-result,
+.ashby-application-form-input-autocomplete-popup-empty,
+.ashby-application-form-input-autocomplete-popup-loading {
+  color: #ffffff !important;
+}
+
+.ashby-application-form-input-autocomplete-popup-result[aria-selected="true"] {
+  background-color: #333333 !important;
+}
+
+/* 14. DATE PICKER */
+
+.ashby-application-form-input-date-popup,
+.ashby-application-form-input-date-popup-header {
+  background-color: #151515 !important;
+  color: #ffffff !important;
+  border-color: #444444 !important;
+}
+
+.ashby-application-form-input-date-popup-title,
+.ashby-application-form-input-date-popup-header-button {
+  color: #ffffff !important;
+}
+
+/* 15. OTHER FORM ELEMENTS */
+
+.ashby-application-form-input-education-entry,
+.ashby-survey-form-container {
+  background-color: transparent !important;
+  color: #ffffff !important;
+}
+
+.ashby-application-form-texting-consent-description,
+.ashby-application-blocking-disclosure {
+  color: #b8b8b8 !important;
+}
+
+.ashby-application-form-success-container,
+.ashby-application-form-failure-container,
+.ashby-application-form-blocked-application-container {
+  background-color: #151515 !important;
+  color: #ffffff !important;
+}
+
+/* 16. FOCUS STATES */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #ffffff !important;
+  outline-offset: 2px;
+}
+
+/* 17. MOBILE */
+
+@media (max-width: 767px) {
+  :root {
+    --widthMaxContent: 100%;
+    --widthMaxJobBoard: 100%;
+  }
+}
