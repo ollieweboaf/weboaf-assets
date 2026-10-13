@@ -1,0 +1,96 @@
+```
+/* stylelint-disable */
+
+/* These variables can be used to control values throughout the job board. */
+:root {
+  /* Background color of the application */
+  --colorAppBackground: #f7f8fa;
+
+  /*
+   * Darker primary color
+   * WARNING - This can be set in the Ashby admin under theme settings!
+   * If you modify, you should make sure your colors work with the settings there.
+   */
+  --colorPrimary900: darkorange;
+
+  /*
+   * Lighter primary color
+   * WARNING - This can be set in the Ashby admin under theme settings!
+   * If you modify, you should make sure your colors work with the settings there.
+   */
+  --colorPrimary600: orange;
+
+  /* The max width of job board container */
+  --widthMaxContent: 800px;
+
+  /* The max width of application form section */
+  --widthMaxJobBoard: 800px;
+
+  /* The max width of subscription preferences container */
+  --widthMaxSubscriptionPreferences: 600px;
+
+  /* Container border radius */
+  --borderRadiusContainer: 10px;
+
+  /* Border radius of control elements (e.g. input boxes) */
+  --borderRadiusControl: 10px;
+
+  /* Button border radius */
+  --borderRadiusButton: 10px;
+
+  /* Font families */
+  --fontFamily: "Whitney SSm", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica", "Arial", "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+}
+
+/* A container for the application limits disclosure message shown before form submission. */
+.ashby-application-blocking-disclosure {}
+
+/* Application autofill input's base layer element. This contains standard copy, a CTA button, and potential validation alerts. */
+.ashby-application-form-autofill-input-base-layer {}
+
+/* Application autofill input's description. */
+.ashby-application-form-autofill-input-description {}
+
+/* Application autofill input's drag state overlay element. Can style [data-state] which can be 'active' or 'hidden'. */
+.ashby-application-form-autofill-input-drag-layer {}
+
+/* Application autofill input form's alert element. Can style [data-highlight] which can be 'negative' or 'positive'. */
+.ashby-application-form-autofill-input-form-alert {}
+
+/* Application autofill input's magic sparkles icon. */
+.ashby-application-form-autofill-input-icon {}
+
+/* Application autofill input's pending state overlay element. Can style [data-state] which can be 'active' or 'hidden'. */
+.ashby-application-form-autofill-input-pending-layer {}
+
+/* Application autofill input's root element. Can style [data-state] which can be 'pending', 'drag', or 'default'. */
+.ashby-application-form-autofill-input-root {}
+
+/* Application autofill input's title. */
+.ashby-application-form-autofill-input-title {}
+
+/* Container element for application autofill input form. */
+.ashby-application-form-autofill-pane {}
+
+/* The resume uploader to auto-fill the application form */
+.ashby-application-form-autofill-uploader {}
+
+/* A container for displaying the custom message to the user */
+.ashby-application-form-blocked-application-container {}
+
+/* A container for the application form. */
+.ashby-application-form-container {}
+
+/* A container for the failure message */
+.ashby-application-form-failure-container {}
+
+/* A container for the label and input on an application form. */
+.ashby-application-form-field-entry {}
+
+/* An autocomplete input on an application form. */
+.ashby-application-form-input-autocomplete {
+  /* Use [aria-expanded="true"] to target when the popup is open. */
+}
+
+/* The results popup for an autocomplete input. */
+.ashby-application-form-input-autocomplete-popup {
