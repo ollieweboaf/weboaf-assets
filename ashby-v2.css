@@ -382,3 +382,11 @@ textarea:focus-visible {
     --widthMaxJobBoard: 100%;
   }
 }
+
+/* Fix selected Yes/No button state */
+button.ashby-application-form-input-yesno-option[aria-pressed="true"] {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+  color: #111111 !important;
+}
