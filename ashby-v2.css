@@ -277,10 +277,21 @@ a:hover {
   accent-color: var(--epia-text);
 }
 
+/* Default Yes/No state */
 .ashby-application-form-input-yesno-option {
   background: var(--epia-surface) !important;
   border-color: var(--epia-border) !important;
   color: var(--epia-text) !important;
+}
+
+/* Selected Yes/No state */
+.ashby-application-form-input-yesno-option[aria-pressed="true"],
+.ashby-application-form-input-yesno-option[aria-checked="true"],
+.ashby-application-form-input-yesno-option[data-state="checked"],
+.ashby-application-form-input-yesno-option:has(input:checked) {
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #111111 !important;
 }
 
 /* 10 — UPLOADS, AUTOFILL & POPUPS */
